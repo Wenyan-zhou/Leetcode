@@ -12,3 +12,7 @@ public class Solution {
         return sum;
     }
 }    
+
+From the list of 2, if the difference between this position and the previous equal to the differnece between the previous and 
+its previous, then we can count one time. If two continuous judgements are true, we get can a 4 elements subset. So we sum the 
+all the curr.
