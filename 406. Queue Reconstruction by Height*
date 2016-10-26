@@ -19,3 +19,5 @@ public class Solution {
         return res.toArray(new int[people.length][]);
     }
 }
+
+compare()实现的是一种排序规则，sort()是排序的动作，如果sort(list,compare实现)则表示按自定义的排序算法去排序，如果不指定会按自然排序。
