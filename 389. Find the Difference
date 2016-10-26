@@ -1,0 +1,13 @@
+public class Solution {
+    public char findTheDifference(String s, String t) {
+    char[] stArray = (s+t).toCharArray();
+    char res = 0;
+    for (char elem : stArray){
+        res ^= elem;
+        }
+        return res;
+    }
+}
+
+Adding S and T String into a CharArray helps me to find the difference, because each element will occur twice in new array.
+if we use the XOR can help us to find the element which only occurs once.
