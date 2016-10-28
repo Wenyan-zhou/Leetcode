@@ -1,0 +1,27 @@
+public class Solution {
+    public int countBattleships(char[][] board) {
+        if(board == null || board.length == 0 || board[0].length == 0){
+            return 0;
+        }else{
+            int result = 0;
+            for(int i=0; i<board.length; i++){
+                for(int j=0; j<board[0].length; j++){
+                    if (board[i][j] == 'X' &&
+                        (i == 0 || board[i - 1][j] == '.') &&
+                        (j == 0 || board[i][j - 1] == '.')) {
+                            result++;
+                        }
+                }
+            }
+            return result;
+        }
+    }
+}
+    
+board[0]表示board的第0行，board[0].length表示board第0行的数组长度就是它的列数.
+
+There are three rules to tell if a cell is a 'head':
+
+The cell is a 'X' (board[i][j] == 'X')
+No left side neighbor, or the left neighbor is a '.' (i == 0 || board[i - 1][j] == '.')
+No right side neighbor, or the right neighbor is a '.' (j == 0 || board[i][j - 1] == '.')
