@@ -1,0 +1,9 @@
+public class Solution {
+    public int hammingDistance(int x, int y) {
+        return Integer.bitCount(x ^ y);
+    }
+}
+
+count the 2 different integers in binary.
+XOR will lead diferent parts become 1.
+Integer.bitCount counts the 1's number.
